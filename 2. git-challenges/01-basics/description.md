@@ -30,29 +30,27 @@ First of all, we will make sure that all our files are tracked by git.
 
 1. By running these commands you add all your changed and untracked files to a commit with a descriptive message:
 
-    ```console
-        $ git add -A
-        $ git commit -m "Commit initial challenges"
-    ```
+   ```console
+       $ git add -A
+       $ git commit -m "Commit initial challenges"
+   ```
 
 1. Afterwards you can push the commit to your repository with this command:
 
-    ```console
-        $ git push
-    ```
+   ```console
+       $ git push
+   ```
 
 ### 3.2. Add, commit and push a file
 
 1.  Create a new empty file in the same folder as these instructions ("2. git-challenges/01-basics") with the name "solution.txt".
 1.  In Git bash (still running in the root folder), run the following command:
 
-
     ```console
     $ git status
     ```
 
 1.  You will see that git is not yet tracking the file. The output should look like:
-
 
     ```text
     On branch master
@@ -68,23 +66,22 @@ First of all, we will make sure that all our files are tracked by git.
 1.  In the "..." in the output above, you will see a line for each untracked file. Copy the line containing your solution file and paste it on the first line of solution.txt. Make sure you don't copy any leading or trailing spaces, just the text itself. Otherwise, the verification script will fail.
 1.  Stage the file and commit it to your local repository:
 
-
     ```console
     $ git add "2. git-challenges/01-basics/solution.txt"
     $ git commit -m "Solution file"
     ```
-    Via `git add` you tell git to track the file, `git commit` is going to effectively add the file to the local repository. With the "-m" option, you add a message to the commit. Alternatively you could also use `git add -A` to add **all** untracked and changed files. 
+
+    Via `git add` you tell git to track the file, `git commit` is going to effectively add the file to the local repository. With the "-m" option, you add a message to the commit. Alternatively you could also use `git add -A` to add **all** untracked and changed files.
 
 1.  Now go to your github repository via a browser and navigate to the "2. git-challenges/01-basics" folder. As you can see, your solution.txt file is not there yet. This is because we need to "push" the changes you just made on your local repository to the remote version:
-
 
     ```console
     $ git push
     ```
+
     Refresh your browser and you will see that the file (with the commit message) is now present.
 
 1.  You can run the status command again. Normally, the output should be as follows:
-
 
     ```text
     Your branch is up to date with 'origin/master'.
@@ -94,7 +91,7 @@ First of all, we will make sure that all our files are tracked by git.
 
 ### 3.3. Add, commit and push a folder
 
-Create a subfolder named 'challenge-1' in the '01-basics' folder. Create a new file "solution.txt" with the text `challenge 1 completed` on the first line. 
+Create a subfolder named 'challenge-1' in the '01-basics' folder. Create a new file "solution.txt" with the text `challenge 1 completed` on the first line.
 
 Make sure that this folder is pushed to your remote repository. Use the sequence of `git add`, `git commit` and `git push` to do this.
 
@@ -102,7 +99,7 @@ Make sure that this folder is pushed to your remote repository. Use the sequence
 
 In order to get a "SUCCESS" from the verify script, you will need to make sure that:
 
--   You have followed the instructions exactly as described in the text. Do not put extra text in files or create extra folders unless asked to do so.
--   Assume that the verify script is case-sensitive. Pay attention to the exact naming of files and folders.
--   Never make changes to the verify script (yes, we will verify all verify scripts afterwards). Changes to the verify script will result in a "FAIL" for the entire challenge.
--   You will only receive a "SUCCESS" if you complete all the steps successfully. If you only complete part of the challenge steps, you will receive a "FAIL" for the entire challenge.
+- You have followed the instructions exactly as described in the text. Do not put extra text in files or create extra folders unless asked to do so.
+- Assume that the verify script is case-sensitive. Pay attention to the exact naming of files and folders.
+- Never make changes to the verify script (yes, we will verify all verify scripts afterwards). Changes to the verify script will result in a "FAIL" for the entire challenge.
+- You will only receive a "SUCCESS" if you complete all the steps successfully. If you only complete part of the challenge steps, you will receive a "FAIL" for the entire challenge.
